@@ -33,59 +33,59 @@ base.metadata.create_all(db)
 
 # creating records in our Programmer table
 ada_lovelace = Programmer(
-    first_name = "Ada",
-    last_name = "Lovelace",
-    gender = "F",
-    nationality = "British",
-    famous_for = "First Programmer"
+    first_name="Ada",
+    last_name="Lovelace",
+    gender="F",
+    nationality="British",
+    famous_for="First Programmer"
 )
 
 alan_turing = Programmer(
-    first_name = "Alan",
-    last_name = "Turing",
-    gender = "M",
-    nationality = "British",
-    famous_for = "Modern Computing"
+    first_name="Alan",
+    last_name="Turing",
+    gender="M",
+    nationality="British",
+    famous_for="Modern Computing"
 )
 
 grace_hopper = Programmer(
-    first_name = "Grace",
-    last_name = "Hopper",
-    gender = "F",
-    nationality = "American",
-    famous_for = "COBOL language"
+    first_name="Grace",
+    last_name="Hopper",
+    gender="F",
+    nationality="American",
+    famous_for="COBOL language"
 )
 
 margaret_hamilton = Programmer(
-    first_name = "Margaret",
-    last_name = "Hamilton",
-    gender = "F",
-    nationality = "American",
-    famous_for = "Apollo 11"
+    first_name="Margaret",
+    last_name="Hamilton",
+    gender="F",
+    nationality="American",
+    famous_for="Apollo 11"
 )
 
 bill_gates = Programmer(
-    first_name = "Bill",
-    last_name = "Gates",
-    gender = "M",
-    nationality = "American",
-    famous_for = "Microsoft"
+    first_name="Bill",
+    last_name="Gates",
+    gender="M",
+    nationality="American",
+    famous_for="Microsoft"
 )
 
 tim_berners_lee = Programmer(
-    first_name = "Tim",
-    last_name = "Berners-Lee",
-    gender = "M",
-    nationality = "British",
-    famous_for = "World Wide Web"
+    first_name="Tim",
+    last_name="Berners-Lee",
+    gender="M",
+    nationality="British",
+    famous_for="World Wide Web"
 )
 
 anthony_nelson = Programmer(
-    first_name = "Anthony",
-    last_name = "Nelson",
-    gender = "M",
-    nationality = "Caribbean",
-    famous_for = "Being the agent"
+    first_name="Anthony",
+    last_name="Nelson",
+    gender="M",
+    nationality="Caribbean",
+    famous_for="Being the agent"
 )
 
 # add each instance of our programmers to our session
@@ -121,11 +121,14 @@ session.commit()
 # # deleting a single record
 # fname = input("Enter a first name: ")
 # lname = input("Enter a last name: ")
-# programmer = session.query(Programmer).filter_by(first_name=fname, last_name=lname).first()
+# programmer = session.query(Programmer).filter_by(first_name=fname,
+# last_name=lname).first()
 # #defensive programming
 # if programmer is not None:
-#     print("Programmer Found: ", programmer.first_name + " " + programmer.last_name)
-#     confirmation = input("Are you sure you want to delete this records? (y/n) ")
+#     print("Programmer Found: ", programmer.first_name + " " +
+#       programmer.last_name)
+#     confirmation = input
+#       ("Are you sure you want to delete this records? (y/n) ")
 #     if confirmation.lower() == "y":
 #         session.delete(programmer)
 #         session.commit()
@@ -153,5 +156,5 @@ for programmer in programmers:
         programmer.gender,
         programmer.nationality,
         programmer.famous_for,
-        sep = " | "
+        sep=" | "
     )
